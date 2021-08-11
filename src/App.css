@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
 
 .App-logo {
@@ -13,26 +18,54 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.react-flow {
+  overflow: auto !important;
 }
 
-.App-link {
-  color: #61dafb;
+aside {
+  border-right: 1px solid #eee;
+  padding: 15px 10px;
+  font-size: 12px;
+  background: #fcfcfc;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+aside > * {
+  margin-bottom: 10px;
+  cursor: grab;
+}
+
+aside .description {
+  margin-bottom: 10px;
+}
+
+.reactflow-wrapper {
+  flex-grow: 1;
+  height: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  width: 150px;
+  font-size: 12px;
+  color: #222;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.react-flow__node {
+  padding: 10px;
+  border-radius: 3px;
+  width: 150px;
+  font-size: 12px;
+  color: #222;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #aaa
+}
+
+@media screen and (min-width: 768px) {
+  aside {
+    width: 20%;
+    max-width: 180px;
   }
 }
